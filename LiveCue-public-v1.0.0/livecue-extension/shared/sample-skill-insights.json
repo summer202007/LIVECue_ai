@@ -1,0 +1,98 @@
+[
+  {
+    "schemaVersion": "skill-card-v0.1",
+    "rubricVersion": "pgc-v1.0",
+    "promptVersion": "gpt55-skill-agent-v0.6",
+    "skillId": "skill_gift_guidance_001",
+    "title": "Turn gift thanks into personal recognition",
+    "category": "gift_guidance",
+    "secondaryCategories": ["room_atmosphere"],
+    "scenario": "A viewer named Mia sends a Rose gift.",
+    "action": "The host thanks Mia by name and adds personal recognition: 'You are always here when I start a challenge. This really helped lift the room energy.'",
+    "effect": "The gift becomes public recognition and relationship maintenance instead of a simple transaction, encouraging more viewers to support the room.",
+    "localized": {
+      "en": {
+        "title": "Turn gift thanks into personal recognition",
+        "scenario": "A viewer named Mia sends a Rose gift.",
+        "action": "The host thanks Mia by name and adds personal recognition: 'You are always here when I start a challenge. This really helped lift the room energy.'",
+        "effect": "The gift becomes public recognition and relationship maintenance instead of a simple transaction, encouraging more viewers to support the room."
+      },
+      "zh": {
+        "title": "把礼物感谢变成个性化认可",
+        "scenario": "观众 Mia 送出 Rose 礼物。",
+        "action": "主播点名感谢 Mia 并个性化认可：“你每次我刚开始挑战的时候都在，这一下真的帮我们把气氛拉起来了。”",
+        "effect": "礼物不只是交易，而是变成公开认可和关系维护，鼓励更多观众参与支持。"
+      }
+    },
+    "timestamp": "00:21",
+    "sourceLive": {
+      "liveUrl": "https://www.tiktok.com/@akkeysterveklww/live",
+      "hostName": "akkeysterveklww"
+    },
+    "confidence": 0.9
+  },
+  {
+    "schemaVersion": "skill-card-v0.1",
+    "rubricVersion": "pgc-v1.0",
+    "promptVersion": "gpt55-skill-agent-v0.6",
+    "skillId": "skill_room_atmosphere_002",
+    "title": "Use low-friction choices to revive chat",
+    "category": "room_atmosphere",
+    "secondaryCategories": ["reply_comment", "content_richness"],
+    "scenario": "Chat slows down before the host starts the next challenge.",
+    "action": "Instead of a generic call for interaction, the host gives viewers a two-choice prompt: 'Next round, should I try a fast song or a slow song first? Type 1 for fast, 2 for slow.'",
+    "effect": "Viewers only need to type a number, so participation is easy. Chat can recover quickly, and the next segment feels co-created by the room.",
+    "localized": {
+      "en": {
+        "title": "Use low-friction choices to revive chat",
+        "scenario": "Chat slows down before the host starts the next challenge.",
+        "action": "Instead of a generic call for interaction, the host gives viewers a two-choice prompt: 'Next round, should I try a fast song or a slow song first? Type 1 for fast, 2 for slow.'",
+        "effect": "Viewers only need to type a number, so participation is easy. Chat can recover quickly, and the next segment feels co-created by the room."
+      },
+      "zh": {
+        "title": "用低门槛选择题拉起弹幕",
+        "scenario": "评论区变慢，主播准备进入下一轮挑战前。",
+        "action": "主播没有空喊互动，而是给观众一个二选一问题：“下一轮你们想看我先挑战快歌还是慢歌？快歌扣 1，慢歌扣 2。”",
+        "effect": "观众只需要输入数字就能参与，互动成本低，弹幕会快速恢复，同时也让下一段内容选择显得由观众共同决定。"
+      }
+    },
+    "timestamp": "01:08",
+    "sourceLive": {
+      "liveUrl": "https://www.tiktok.com/@akkeysterveklww/live",
+      "hostName": "akkeysterveklww"
+    },
+    "confidence": 0.87
+  },
+  {
+    "schemaVersion": "skill-card-v0.1",
+    "rubricVersion": "pgc-v1.0",
+    "promptVersion": "gpt55-skill-agent-v0.6",
+    "skillId": "skill_reply_comment_003",
+    "title": "Turn skeptical comments into explanation moments",
+    "category": "reply_comment",
+    "secondaryCategories": ["host_commitment", "content_richness"],
+    "scenario": "A viewer comments that the challenge rules are hard to understand.",
+    "action": "The host first acknowledges the confusion, then restates the rule in one clear sentence: 'Good question. Let me make it clearer. This round is not about speed. It is about whether I can finish the assigned move within 30 seconds.'",
+    "effect": "The skeptical comment is not ignored or rejected. It becomes a chance to clarify the room rules and lower the entry barrier for new viewers.",
+    "localized": {
+      "en": {
+        "title": "Turn skeptical comments into explanation moments",
+        "scenario": "A viewer comments that the challenge rules are hard to understand.",
+        "action": "The host first acknowledges the confusion, then restates the rule in one clear sentence: 'Good question. Let me make it clearer. This round is not about speed. It is about whether I can finish the assigned move within 30 seconds.'",
+        "effect": "The skeptical comment is not ignored or rejected. It becomes a chance to clarify the room rules and lower the entry barrier for new viewers."
+      },
+      "zh": {
+        "title": "把质疑评论转成解释机会",
+        "scenario": "有观众评论说挑战规则看不懂。",
+        "action": "主播先承认对方的疑问，再用一句话重新解释规则：“你问得对，我再说清楚一点，这轮不是比速度，是看我能不能在 30 秒内完成指定动作。”",
+        "effect": "质疑没有被忽略或反驳，而是变成补充说明，能降低新观众理解门槛，也让直播间规则更清楚。"
+      }
+    },
+    "timestamp": "02:36",
+    "sourceLive": {
+      "liveUrl": "https://www.tiktok.com/@akkeysterveklww/live",
+      "hostName": "akkeysterveklww"
+    },
+    "confidence": 0.84
+  }
+]

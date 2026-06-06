@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LiveCue Setup</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main class="setup-shell">
+      <header class="hero">
+        <span class="mark"><b></b></span>
+        <div>
+          <p class="eyebrow">LiveCue setup</p>
+          <h1>Choose models, paste keys, run checks</h1>
+          <p class="subcopy">LiveCue needs one vision model, one Skill Agent model, and one speech key. Keys stay in local Chrome storage.</p>
+        </div>
+      </header>
+
+      <section class="layout">
+        <form class="card form-card">
+          <section class="provider-block">
+            <div class="block-head">
+              <span>1</span>
+              <div>
+                <h2>Vision model</h2>
+                <p>Understands livestream screenshots every 10 seconds.</p>
+              </div>
+            </div>
+            <div class="grid">
+              <label>
+                Model provider
+                <select name="visionProvider">
+                  <option value="ark">Doubao / Volcano Ark</option>
+                  <option value="openai-compatible">OpenAI-compatible vision</option>
+                </select>
+              </label>
+              <label>
+                API key
+                <input type="password" name="visionApiKey" autocomplete="off" placeholder="ark-... or sk-..." />
+              </label>
+              <label>
+                Model name
+                <input name="visionModel" autocomplete="off" placeholder="doubao-seed-2-0-lite-260215" />
+              </label>
+              <div class="key-help">
+                <b>No key yet?</b>
+                <a href="https://console.volcengine.com/ark" target="_blank" rel="noreferrer">Get a Doubao / Ark key</a>
+                <a href="https://platform.openai.com/api-keys" target="_blank" rel="noreferrer">Use an OpenAI-compatible key</a>
+              </div>
+            </div>
+            <details class="advanced">
+              <summary>Advanced endpoint</summary>
+              <label>
+                Base URL
+                <input name="visionBaseUrl" autocomplete="off" placeholder="https://ark.cn-beijing.volces.com/api/v3" />
+              </label>
+            </details>
+          </section>
+
+          <section class="provider-block">
+            <div class="block-head">
+              <span>2</span>
+              <div>
+                <h2>Skill Agent model</h2>
+                <p>Turns captured evidence into learnable creator skills.</p>
+              </div>
+            </div>
+            <div class="grid">
+              <label>
+                Model provider
+                <select name="skillAgentProvider">
+                  <option value="mock">Mock Skill Agent</option>
+                  <option value="ark">Doubao / Volcano Ark</option>
+                  <option value="openai-compatible">OpenAI-compatible chat</option>
+                  <option value="claude">Claude</option>
+                </select>
+              </label>
+              <label>
+                API key
+                <input type="password" name="skillAgentApiKey" autocomplete="off" placeholder="Optional if reusing vision key" />
+              </label>
+              <label>
+                Model name
+                <input name="skillAgentModel" autocomplete="off" placeholder="doubao-seed-2-0-lite-260215" />
+              </label>
+              <div class="key-help">
+                <b>No key yet?</b>
+                <a href="https://console.volcengine.com/ark" target="_blank" rel="noreferrer">Get a Doubao / Ark key</a>
+                <a href="https://platform.openai.com/api-keys" target="_blank" rel="noreferrer">Use an OpenAI-compatible key</a>
+                <a href="https://console.anthropic.com/settings/keys" target="_blank" rel="noreferrer">Get a Claude key</a>
+              </div>
+            </div>
+            <details class="advanced">
+              <summary>Advanced endpoint</summary>
+              <label>
+                Base URL
+                <input name="skillAgentBaseUrl" autocomplete="off" placeholder="https://ark.cn-beijing.volces.com/api/v3" />
+              </label>
+            </details>
+          </section>
+
+          <section class="provider-block">
+            <div class="block-head">
+              <span>3</span>
+              <div>
+                <h2>Speech recognition</h2>
+                <p>Transcribes livestream audio through the local ASR helper.</p>
+              </div>
+            </div>
+            <div class="grid">
+              <label>
+                Provider
+                <select name="asrProvider">
+                  <option value="volcengine">Volcengine streaming ASR</option>
+                </select>
+              </label>
+              <label>
+                Volcengine ASR API key
+                <input type="password" name="asrApiKey" autocomplete="off" placeholder="Paste your Volcengine ASR key" />
+              </label>
+              <div class="key-help wide">
+                <b>No key yet?</b>
+                <a href="https://console.volcengine.com/speech" target="_blank" rel="noreferrer">Open Volcengine Speech Console</a>
+              </div>
+            </div>
+            <div class="relay-helper">
+              <div>
+                <b>Start local ASR helper</b>
+                <p>Requires Node.js 20+. Start the relay once, then keep that terminal window open.</p>
+              </div>
+              <ol>
+                <li>Open the downloaded <b>LiveCue extension</b> folder.</li>
+                <li>macOS: double-click <code>Start LiveCue ASR Relay.command</code>.</li>
+                <li>Windows: double-click <code>Start LiveCue ASR Relay.bat</code>.</li>
+                <li>If macOS blocks it, copy the fallback command, paste it into Terminal, choose the command file, and press Enter.</li>
+              </ol>
+              <div class="command-row">
+                <code id="relay-command">RELAY_SCRIPT="$(osascript -e 'POSIX path of (choose file with prompt "Choose Start LiveCue ASR Relay.command")')" && bash "$RELAY_SCRIPT"</code>
+                <button class="secondary" id="copy-relay-command" type="button">Copy command</button>
+              </div>
+              <p class="relay-note">When it works, Terminal shows: <code>LiveCue ASR relay listening on http://127.0.0.1:17395/asr</code></p>
+            </div>
+            <details class="advanced">
+              <summary>Advanced local relay</summary>
+              <label>
+                Local relay URL
+                <input name="asrRelayUrl" autocomplete="off" placeholder="http://127.0.0.1:17395/asr" />
+              </label>
+            </details>
+          </section>
+
+          <div class="actions">
+            <button class="secondary" id="clear" type="button">Reset</button>
+            <button class="secondary" id="save" type="button">Save</button>
+            <button id="save-test" type="button">Save & run checks</button>
+            <button class="primary-alt" id="open-tiktok" type="button">Open TikTok LIVE</button>
+          </div>
+          <p class="status" id="status"></p>
+        </form>
+
+        <aside class="card checks-card">
+          <h2>Readiness</h2>
+          <p>After pasting keys, run checks once. Green means LiveCue is ready.</p>
+          <ul class="checks" id="checks">
+            <li data-check="vision"><i></i><span><b>Vision</b><em>Not checked yet</em></span></li>
+            <li data-check="skillAgent"><i></i><span><b>Skill Agent</b><em>Not checked yet</em></span></li>
+            <li data-check="asrRelay"><i></i><span><b>ASR helper</b><em>Not checked yet</em></span></li>
+            <li data-check="asrKey"><i></i><span><b>ASR key</b><em>Not checked yet</em></span></li>
+          </ul>
+        </aside>
+      </section>
+    </main>
+    <script src="options.js"></script>
+  </body>
+</html>
