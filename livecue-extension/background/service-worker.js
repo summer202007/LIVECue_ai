@@ -21,7 +21,7 @@ const DEFAULT_CONFIG = {
 const BUILD_INFO = {
   label: "LiveCue public v1.0.0",
   promptVersion: "skill-agent-balanced-visual-v0.3",
-  builtAt: "2026-06-06T03:51:07.042Z"
+  builtAt: "2026-06-06T07:21:15.069Z"
 };
 
 const sessions = new Map();

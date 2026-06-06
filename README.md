@@ -1,8 +1,34 @@
 # LiveCue
 
-LiveCue helps you learn from TikTok LIVE rooms. It adds a small learning panel to TikTok, captures public room signals, visible comments, livestream frames, and page audio, then uses your own model/API keys to generate learnable creator skill cards.
+LiveCue is an AI-powered learning tool for livestreams, currently built for TikTok LIVE. It summarizes creator skills in real time while you watch, turning every LIVE room into a learning session.
 
-LiveCue 是一个 TikTok LIVE 看播学习工具。它会在 TikTok 页面注入一个学习面板，采集公开直播间信号、可见评论、直播画面和页面音频，并使用你自己配置的模型/API Key 生成可学习的主播技巧卡片。
+LiveCue adds a learning panel to the livestream page. It uses public room signals, visible comments, livestream visuals, and page audio, then calls your own configured model/API keys to generate learnable creator skill cards.
+
+LiveCue 是一个 AI 赋能的直播学习工具，目前支持 TikTok LIVE。它会在你观看直播时，实时总结主播的直播技巧，让每一次看播都变成一次有效学习。
+
+LiveCue 会在直播页面侧边显示一个学习面板，基于公开直播间信号、可见评论、直播画面和音频，使用你自己配置的模型/API Key，生成可学习的主播技巧卡片。
+
+## See It In Action / 使用演示
+
+**1. Works automatically on TikTok pages**  
+**1. 在 TikTok 域名下自动生效**
+
+![LiveCue works automatically on TikTok pages](docs/assets/1.gif)
+
+**2. Start once, keep learning continuously**  
+**2. 一键开启，持续学习**
+
+![Start LiveCue once and keep learning continuously](docs/assets/2.gif)
+
+**3. Save useful skills and build your learning library**  
+**3. 支持收藏，沉淀知识库**
+
+![Save useful skills into a learning library](docs/assets/3.gif)
+
+**4. Configure your own API keys visually**  
+**4. 可视化配置 API Key**
+
+![Configure model and ASR API keys visually](docs/assets/1.png)
 
 After setup, open a TikTok LIVE room, click `Start learning`, and wait about one minute. LiveCue will start showing skill cards that explain what the creator did, when it worked, and why other creators can learn from it.
 
@@ -53,6 +79,8 @@ Click `Load unpacked`.
 
 点击 `Load unpacked / 加载已解压的扩展程序`。
 
+![Click Load unpacked in Chrome extensions](docs/assets/3.png)
+
 Select this folder:
 
 选择这个文件夹：
@@ -60,6 +88,8 @@ Select this folder:
 ```text
 LiveCue-public-v1.0.0/livecue-extension
 ```
+
+![Select the livecue-extension folder](docs/assets/4.png)
 
 ### 3. Start the local ASR relay / 启动本地 ASR Relay
 
