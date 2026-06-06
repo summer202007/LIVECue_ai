@@ -1,12 +1,34 @@
 # LiveCue
 
+**AI watch-and-learn copilot for TikTok LIVE creators.**
+
 LiveCue is an AI-powered learning tool for livestreams, currently built for TikTok LIVE. It summarizes creator skills in real time while you watch, turning every LIVE room into a learning session.
 
 LiveCue adds a learning panel to the livestream page. It uses public room signals, visible comments, livestream visuals, and page audio, then calls your own configured model/API keys to generate learnable creator skill cards.
 
+**直播创作者的 AI 看播学习助手。**
+
 LiveCue 是一个 AI 赋能的直播学习工具，目前支持 TikTok LIVE。它会在你观看直播时，实时总结主播的直播技巧，让每一次看播都变成一次有效学习。
 
 LiveCue 会在直播页面侧边显示一个学习面板，基于公开直播间信号、可见评论、直播画面和音频，使用你自己配置的模型/API Key，生成可学习的主播技巧卡片。
+
+## Download / 下载
+
+[Download LiveCue public v1.0.0](https://github.com/summer202007/LIVECue_ai/releases/latest/download/LiveCue-public-v1.0.0.zip)
+
+[下载 LiveCue public v1.0.0](https://github.com/summer202007/LIVECue_ai/releases/latest/download/LiveCue-public-v1.0.0.zip)
+
+## Why LiveCue / 为什么用 LiveCue
+
+- Watch TikTok LIVE rooms and extract creator skills in real time.
+- Learn from visible comments, livestream visuals, page audio, and room interactions.
+- Save useful skills into your own local learning library.
+- BYOK: bring your own model/API keys. Your keys stay local.
+
+- 观看 TikTok LIVE 时，实时提炼主播可学习的直播技巧。
+- 从可见评论、直播画面、页面音频和直播间互动里学习。
+- 把有价值的技巧收藏起来，沉淀自己的本地学习库。
+- BYOK：使用你自己的模型/API Key，Key 保存在本地。
 
 ## See It In Action / 使用演示
 
@@ -253,9 +275,25 @@ node scripts/build-release.mjs --version 1.0.0 --health-check
 
 ## Privacy / 隐私
 
-API keys are stored in local Chrome storage. The release package does not include private API keys.
+LiveCue is BYOK: bring your own model/API keys. API keys are stored in local Chrome storage. The release package does not include private API keys.
 
-API Key 会保存在本地 Chrome storage 中。发布包不包含任何私有 API Key。
+LiveCue 是 BYOK 工具：使用你自己的模型/API Key。API Key 会保存在本地 Chrome storage 中。发布包不包含任何私有 API Key。
+
+## Roadmap / 路线图
+
+- Chrome Web Store release.
+- Easier local ASR helper with less terminal setup.
+- More ASR and model providers.
+- Better multilingual skill cards.
+- Creator learning library export.
+- Mobile LIVE learning concept.
+
+- 发布到 Chrome Web Store。
+- 降低本地 ASR helper 的启动门槛，减少终端操作。
+- 支持更多 ASR 和模型 provider。
+- 优化多语言技巧卡片。
+- 支持导出主播学习知识库。
+- 探索移动端直播学习体验。
 
 ## Known Limitations / 已知限制
 
